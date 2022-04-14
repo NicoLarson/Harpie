@@ -1,0 +1,100 @@
+:root {
+    --color-black: #1c222e;
+    --color-green: #41533b;
+    --color-kaki: #9e9a75;
+    --color-brown-1: #604439;
+    --color-brown-0: #554840;
+    --color-white: #fafafa;
+    --color-black-2: #222;
+    --color-blue: #00a0e9;
+    --color-red: #e90000;
+    --color-btn-menu: var(--color-kaki);
+    --color-btn-menu-rel: #7c7a5f;
+
+}
+
+body {
+    background-color: var(--color-green);
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+header {
+    padding: 4rem;
+    background-color: var(--color-kaki);
+    color: var(--color-black);
+    border-bottom: .2rem solid var(--color-black);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main.menu .main-menu-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0;
+    margin: 8rem;
+}
+
+/* 
+main.menu .main-menu-list li a {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    background-color: var(--color-brown-1);
+    color: var(--color-black);
+    border: .4rem solid var(--color-black);
+} */
+
+
+main.menu .main-menu-list li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 0 2rem 1rem;
+    appearance: none;
+    background-color: var(--color-btn-menu);
+    border-radius: 4px;
+    border-width: 0;
+    border: .2rem solid var(--color-black);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: box-shadow .15s, transform .15s;
+    will-change: box-shadow, transform;
+}
+
+main.menu .main-menu-list li a:focus {
+    box-shadow: var(--color-btn-menu-rel) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
+}
+
+main.menu .main-menu-list li a:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+main.menu .main-menu-list li a:active {
+    box-shadow: var(--color-btn-menu-rel) 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
+main.menu .main-menu-list li a svg {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+}
+
+main.menu .main-menu-list li a p {
+    color: var(--color-black);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
