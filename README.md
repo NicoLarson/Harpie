@@ -15,6 +15,8 @@ composer install
 ## Create Postgresql database
 
 ```bash
+# Make sure you have started postgresql
+sudo service postgresql start
 php bin/console doctrine:migrations:migrate
 ```
 

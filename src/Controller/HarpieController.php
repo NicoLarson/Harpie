@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\FicheODE;
 use App\Entity\Demandeur;
+use App\Entity\TypeMission;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -30,7 +31,7 @@ class HarpieController extends AbstractController
     public function creationMission(): Response
     {
         $ficheODE = new FicheODE();
-        $form = $this->createFormBuilder($ficheODE)
+        $formFicheODE = $this->createFormBuilder($ficheODE)
             ->add('numeroMission')
             ->add('typeMission')
             ->add('force')
@@ -49,9 +50,15 @@ class HarpieController extends AbstractController
             ->add('valider', SubmitType::class, ['label' => 'Soumettre', 'attr' => ['class' => 'btn btn-validation']])
             ->getForm();
 
+        $typeMission = new TypeMission();
+        $formTypeMission = $this->createFormBuilder($typeMission)
+            ->add('libelle')
+            ->getForm();
+
         return $this->render('harpie/creation_mission.html.twig', [
             'controller_name' => 'HarpieController',
-            'formFicheODE' => $form->createView(),
+            'formFicheODE' => $formFicheODE->createView(),
+            'formTypeMission' => $formTypeMission->createView(),
         ]);
     }
 }
