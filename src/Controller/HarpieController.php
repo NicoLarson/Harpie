@@ -17,4 +17,14 @@ class HarpieController extends AbstractController
             'controller_name' => 'HarpieController',
         ]);
     }
+
+    /**
+     * @Route("/creation_mission", name="creation_mission")
+     */
+    public function creationMission(): Response
+    {
+        return $this->render('harpie/creation_mission.html.twig', [
+            'controller_name' => 'HarpieController',
+        ]);
+    }
 }
