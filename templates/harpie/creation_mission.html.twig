@@ -7,5 +7,13 @@
   Création mission
 {% endblock %}
 {% block content %}
-  <main class="creation-mission"></main>
+  <main class="creation-mission">
+    {{ form_start(formFicheODE) }}
+    {{form_row(formFicheODE.numeroMission, {'attr':{'placeholder': "Numéro de mission"}})}}
+    {{form_row(formFicheODE.typeMission, {'attr':{'placeholder': "Type de mission"}})}}
+    {{form_row(formFicheODE.force, {'attr':{'placeholder': "Type de mission"}})}}
+    
+    
+    {{ form_end(formFicheODE) }}
+  </main>
 {% endblock %}

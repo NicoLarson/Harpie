@@ -10,7 +10,9 @@
     --color-red: #e90000;
     --color-btn-menu: var(--color-kaki);
     --color-btn-menu-rel: #7c7a5f;
-
+    --color-bg-form: var(--color-kaki);
+    --color-bg-form-div: #fafafa;
+    --color-btn-validation: yellow;
 }
 
 body {
@@ -19,7 +21,10 @@ body {
 }
 
 header {
-    padding: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 8rem;
     background-color: var(--color-kaki);
     color: var(--color-black);
     border-bottom: .2rem solid var(--color-black);
@@ -31,6 +36,18 @@ header h1 {
     margin-bottom: 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+header a {
+    display: block;
+    color: var(--color-black);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: all .2s;
+}
+header a:hover {
+    color: var(--color-green);
 }
 
 main.menu .main-menu-list {
@@ -97,4 +114,49 @@ main.menu .main-menu-list li a p {
     color: var(--color-black);
     font-size: 1.6rem;
     font-weight: 700;
+}
+
+
+/*  */
+/* CREATION MISSION */
+/*  */
+
+main.creation-mission {
+    background-color: var(--color-green);
+    padding: 4rem;
+    color: var(--color-black);
+}
+
+main.creation-mission form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: var(--color-bg-form);
+}
+
+main.creation-mission form>div {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 1rem;
+}
+
+main.creation-mission form>div label {
+    display: block;
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.btn-validation {
+    background-color: var(--color-btn-validation);
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-validation) 0 -3px 0 inset;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: .2rem solid var(--color-black);
+    padding: 1rem;
+
 }
