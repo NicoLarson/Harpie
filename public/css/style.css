@@ -46,6 +46,7 @@ header a {
     font-size: 2rem;
     transition: all .2s;
 }
+
 header a:hover {
     color: var(--color-green);
 }
@@ -59,17 +60,9 @@ main.menu .main-menu-list {
     margin: 8rem;
 }
 
-/* 
-main.menu .main-menu-list li a {
-    display: block;
-    text-align: center;
-    margin: 0;
-    padding: 2rem;
-    background-color: var(--color-brown-1);
-    color: var(--color-black);
-    border: .4rem solid var(--color-black);
-} */
-
+main.menu .main-menu-list li {
+    margin: 1rem;
+}
 
 main.menu .main-menu-list li a {
     display: flex;
