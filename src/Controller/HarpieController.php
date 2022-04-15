@@ -34,6 +34,16 @@ class HarpieController extends AbstractController
     }
 
     /**
+     * @Route("/choix_type_mission", name="choix_type_mission")
+     */
+    public function choixTypeMission(): Response
+    {
+        return $this->render('harpie/choix_type_mission.html.twig', [
+            'controller_name' => 'HarpieController',
+        ]);
+    }
+
+    /**
      * @Route("/creation_mission", name="creation_mission")
      */
     public function creationMission(): Response

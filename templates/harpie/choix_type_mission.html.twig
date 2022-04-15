@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Mission Harpie
+{% endblock %}
+{% block headerTitle %}
+  Type de mission
+{% endblock %}
+{% block content %}
+  <main class="choix-type-mission">
+    <ul class="choix-type-mission-list">
+      <li class="choix-type-mission-list-item">
+        <a href="{{ path('creation_mission') }}">
+          <p>
+            PLA
+          </p>
+        </a>
+      </li>
+
+      <li class="choix-type-mission-list-item">
+        <a href="#">
+          <p>
+            ANACONDA
+          </p>
+        </a>
+      </li>
+      <li class="choix-type-mission-list-item">
+        <a href="#">
+          <p>
+            PLC
+          </p>
+        </a>
+      </li>
+    </ul>
+  </main>
+{% endblock %}
