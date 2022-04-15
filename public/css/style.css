@@ -221,6 +221,7 @@ main.creation-mission form fieldset button:active,
 main.creation-mission form .btn-validation:active {
     transform: scale(.95);
 }
+
 main.creation-mission form .btn-validation {
     background-color: var(--color-form-btn-submit-bg);
     justify-content: center;
@@ -230,4 +231,9 @@ main.creation-mission form .btn-validation {
     padding: 1rem;
     cursor: pointer;
     transition: all .1s;
+}
+
+main.creation-mission form>div:last-child {
+    align-self: flex-end;
+    margin: 1rem;
 }
