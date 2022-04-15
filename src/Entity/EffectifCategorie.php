@@ -22,6 +22,10 @@ class EffectifCategorie
      */
     private $libelle;
 
+    public function __toString()
+    {
+        return $this->libelle;
+    }
     public function getId(): ?int
     {
         return $this->id;

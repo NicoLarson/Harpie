@@ -118,7 +118,10 @@ class FicheODE
         $this->transportParMissions = new ArrayCollection();
         $this->cibleParMissions = new ArrayCollection();
     }
-
+    public function __toString()
+    {
+        return $this->libelle;
+    }
     public function getId(): ?int
     {
         return $this->id;

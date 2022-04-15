@@ -21,7 +21,10 @@ class TransportSousCategorie
      * @ORM\Column(type="string", length=100)
      */
     private $libelle;
-
+    public function __toString()
+    {
+        return $this->libelle;
+    }
     public function getId(): ?int
     {
         return $this->id;

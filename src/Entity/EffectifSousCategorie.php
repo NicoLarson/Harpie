@@ -34,6 +34,11 @@ class EffectifSousCategorie
         $this->effectifs = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->libelle;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

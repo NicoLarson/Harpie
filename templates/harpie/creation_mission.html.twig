@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}
   Mission Harpie
 {% endblock %}
@@ -8,11 +7,158 @@
 {% endblock %}
 {% block content %}
   <main class="creation-mission">
-  <form>
-    {{form_row(formFicheODE.numeroMission, {'attr':{'placeholder': "Numéro de mission"}})}}
-    {{form_row(formFicheODE.force, {'attr':{'placeholder': "Force"}})}}
-    {{form_row(formTypeMission.libelle)}}
-  </form>
-    
+    <form>
+      <div class="form-debut-fin">
+        {{ form_row(formFicheODE.dateDebut) }}
+        {{ form_row(formFicheODE.dateFin) }}
+      </div>
+      <div class="form-cible">
+        {{
+          form_row(
+            formCible,
+            {
+              label: 'Cible'
+            }
+          )
+        }}
+        <button type="button" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>
+        </button>
+      </div>
+      <div class="form-effectif-group">
+        <div class="form-effectif">
+          {{
+            form_row(
+              formEffectif,
+              {
+                label: 'Effectif'
+              }
+            )
+          }}
+          <button type="button" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewbox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+            </svg>
+          </button>
+        </div>
+        <div class="form-effectif-piroguier">
+          {{
+            form_row(
+              formEffectifPiroguier,
+              {
+                label: 'Effectif piroguer'
+              }
+            )
+          }}
+          <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>
+        </div>
+        <div class="total-effectif">
+          <p>
+            Total effectif :
+          </p>
+          <p></p>
+        </div>
+      </div>
+      <div class="form-transport">
+        {{
+          form_row(
+            formTransport,
+            {
+              label: 'Transport'
+            }
+          )
+        }}
+        <button type="button" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>
+        </button>
+      </div>
+      <div class="form-manoeuvre">
+        {{
+          form_row(
+            formManoeuvreParMission,
+            {
+              label: 'Manoeuvre'
+            }
+          )
+        }}
+        <button type="button" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>
+        </button>
+      </div>
+      {{ form_row(formFicheODE.cadreLegal) }}
+      {{ form_row(formFicheODE.observation) }}
+      <div class="form-communication">
+        {{
+          form_row(
+            formCommunicationParMission,
+            {
+              label: 'Communication'
+            }
+          )
+        }}
+        <button type="button" class="btn btn-primary">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewbox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>
+        </button>
+      </div>
+      {{ form_row(formFicheODE.soumettre) }}
+    </form>
   </main>
 {% endblock %}

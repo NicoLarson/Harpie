@@ -32,7 +32,10 @@ class Transport
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $appuiFeu;
-
+    public function __toString()
+    {
+        return $this->libelle;
+    }
     public function getId(): ?int
     {
         return $this->id;

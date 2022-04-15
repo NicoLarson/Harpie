@@ -33,7 +33,10 @@ class Force
     {
         $this->fichesODE = new ArrayCollection();
     }
-
+    public function __toString()
+    {
+        return $this->libelle;
+    }
     public function getId(): ?int
     {
         return $this->id;
