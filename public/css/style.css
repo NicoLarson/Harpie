@@ -51,7 +51,7 @@ header a:hover {
     color: var(--color-green);
 }
 
-main.menu .main-menu-list {
+nav ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -60,11 +60,11 @@ main.menu .main-menu-list {
     margin: 8rem;
 }
 
-main.menu .main-menu-list li {
+nav ul li {
     margin: 1rem;
 }
 
-main.menu .main-menu-list li a {
+nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,27 +83,27 @@ main.menu .main-menu-list li a {
     will-change: box-shadow, transform;
 }
 
-main.menu .main-menu-list li a:focus {
+nav ul li a:focus {
     box-shadow: var(--color-btn-menu-rel) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
 }
 
-main.menu .main-menu-list li a:hover {
+nav ul li a:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-main.menu .main-menu-list li a:active {
+nav ul li a:active {
     box-shadow: var(--color-btn-menu-rel) 0 3px 7px inset;
     transform: translateY(2px);
 }
 
-main.menu .main-menu-list li a svg {
+nav ul li a svg {
     width: 4rem;
     height: 4rem;
     padding: 1rem;
 }
 
-main.menu .main-menu-list li a p {
+nav ul li a p {
     color: var(--color-black);
     font-size: 1.6rem;
     font-weight: 700;

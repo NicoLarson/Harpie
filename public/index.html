@@ -4,34 +4,77 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        Mission Harpie
-    </title>
+    <title>Mission Harpie</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
-      <h1>
-          Création mission
-      </h1>
-      <a  class="btn-menu" href="/">MENU</a>
-
+      <h1>Type de mission</h1>
+      <a class="btn-menu" href="/">MENU</a>
     </header>
-      <main class="creation-mission">
-    <form name="form" method="post">
-    <div><label for="form_numeroMission" class="required">Numero mission</label><input type="text" id="form_numeroMission" name="form[numeroMission]" required="required" maxlength="255" placeholder="Numéro de mission" /></div>
-    <div><label for="form_typeMission" class="required">Type mission</label><select id="form_typeMission" name="form[typeMission]" placeholder="Type de mission"></select></div>
-    <div><label for="form_force" class="required">Force</label><select id="form_force" name="form[force]" placeholder="Type de mission"></select></div>
-    
-    
-    <div><label class="required">Date demande</label><div id="form_dateDemande"><div id="form_dateDemande_date"><select id="form_dateDemande_date_month" name="form[dateDemande][date][month]"><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select><select id="form_dateDemande_date_day" name="form[dateDemande][date][day]"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="form_dateDemande_date_year" name="form[dateDemande][date][year]"><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option></select></div><div id="form_dateDemande_time">
-            <select id="form_dateDemande_time_hour" name="form[dateDemande][time][hour]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>:<select id="form_dateDemande_time_minute" name="form[dateDemande][time][minute]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>        </div></div></div><div><label for="form_denominationOperation">Denomination operation</label><textarea id="form_denominationOperation" name="form[denominationOperation]"></textarea></div><div><label class="required">Date debut</label><div id="form_dateDebut"><div id="form_dateDebut_date"><select id="form_dateDebut_date_month" name="form[dateDebut][date][month]"><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select><select id="form_dateDebut_date_day" name="form[dateDebut][date][day]"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="form_dateDebut_date_year" name="form[dateDebut][date][year]"><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option></select></div><div id="form_dateDebut_time">
-            <select id="form_dateDebut_time_hour" name="form[dateDebut][time][hour]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>:<select id="form_dateDebut_time_minute" name="form[dateDebut][time][minute]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>        </div></div></div><div><label class="required">Date fin</label><div id="form_dateFin"><div id="form_dateFin_date"><select id="form_dateFin_date_month" name="form[dateFin][date][month]"><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select><select id="form_dateFin_date_day" name="form[dateFin][date][day]"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select id="form_dateFin_date_year" name="form[dateFin][date][year]"><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option></select></div><div id="form_dateFin_time">
-            <select id="form_dateFin_time_hour" name="form[dateFin][time][hour]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>:<select id="form_dateFin_time_minute" name="form[dateFin][time][minute]"><option value="0">00</option><option value="1">01</option><option value="2">02</option><option value="3">03</option><option value="4">04</option><option value="5">05</option><option value="6">06</option><option value="7">07</option><option value="8">08</option><option value="9">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option><option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option><option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option></select>        </div></div></div><div><label for="form_cadreLegal" class="required">Cadre legal</label><select id="form_cadreLegal" name="form[cadreLegal]"></select></div><div><label for="form_observation">Observation</label><textarea id="form_observation" name="form[observation]"></textarea></div><div><label for="form_effectifParMissions">Effectif par missions</label><select id="form_effectifParMissions" name="form[effectifParMissions][]" multiple="multiple"></select></div><div><label for="form_effectifPirogierParMissions">Effectif pirogier par missions</label><select id="form_effectifPirogierParMissions" name="form[effectifPirogierParMissions][]" multiple="multiple"></select></div><div><label for="form_communicationParMissions">Communication par missions</label><select id="form_communicationParMissions" name="form[communicationParMissions][]" multiple="multiple"></select></div><div><label for="form_manoeuvreParMissions">Manoeuvre par missions</label><select id="form_manoeuvreParMissions" name="form[manoeuvreParMissions][]" multiple="multiple"></select></div><div><label for="form_transportParMissions">Transport par missions</label><select id="form_transportParMissions" name="form[transportParMissions][]" multiple="multiple"></select></div><div><label for="form_cibleParMissions">Cible par missions</label><select id="form_cibleParMissions" name="form[cibleParMissions][]" multiple="multiple"></select></div><div><button type="submit" id="form_valider" name="form[valider]" class="btn btn-validation">Soumettre</button></div><input type="hidden" id="form__token" name="form[_token]" value="2618796da06c9031b38.8uiiwbREs0NyAcaIYx5xwcUvHHL0lIA1nY6JtHkfq58.ntHbl9kJ0W42aIvGAHM5l7NYKRuD4LlQ3-bCxDdl4uy9rJaI1Q6KNxBU9g" /></form>
-  </main>
+    <main>
+      <nav>
+        <ul class="choix-type-mission-list">
+          <li class="choix-type-mission-list-item">
+            <a href="{{ path('creation_mission') }}">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>
+              <p>
+                PLA
+              </p>
+            </a>
+          </li>
+  
+          <li class="choix-type-mission-list-item">
+            <a href="{{ path('creation_mission') }}">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg> 
+            <p>
+                ANACONDA
+              </p>
+            </a>
+          </li>
+          <li class="choix-type-mission-list-item">
+            <a href="{{ path('creation_mission') }}">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+          </svg>  
+            <p>
+                PLC
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </main>
 
     <footer></footer>
-  
-</body>
+  </body>
 </html>

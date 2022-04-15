@@ -4,33 +4,68 @@
   Mission Harpie
 {% endblock %}
 {% block headerTitle %}
-  Type de mission
+  Type de la mission
 {% endblock %}
 {% block content %}
-  <main class="choix-type-mission">
-    <ul class="choix-type-mission-list">
-      <li class="choix-type-mission-list-item">
-        <a href="{{ path('creation_mission') }}">
-          <p>
-            PLA
-          </p>
-        </a>
-      </li>
+  <main>
+    <nav>
+      <ul class="choix-type-mission-list">
+        <li class="choix-type-mission-list-item">
+          <a href="{{ path('creation_mission') }}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#000000"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+        </svg>
+            <p>
+              PLA
+            </p>
+          </a>
+        </li>
 
-      <li class="choix-type-mission-list-item">
-        <a href="#">
+        <li class="choix-type-mission-list-item">
+          <a href="{{ path('creation_mission') }}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#000000"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+        </svg> 
           <p>
-            ANACONDA
-          </p>
-        </a>
-      </li>
-      <li class="choix-type-mission-list-item">
-        <a href="#">
+              ANACONDA
+            </p>
+          </a>
+        </li>
+        <li class="choix-type-mission-list-item">
+          <a href="{{ path('creation_mission') }}">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#000000"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+        </svg>  
           <p>
-            PLC
-          </p>
-        </a>
-      </li>
-    </ul>
+              PLC
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </main>
 {% endblock %}
