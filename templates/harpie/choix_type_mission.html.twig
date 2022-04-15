@@ -11,18 +11,25 @@
     <nav>
       <ul class="choix-type-mission-list">
         <li class="choix-type-mission-list-item">
-          <a href="{{ path('creation_mission') }}">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-        </svg>
+          <a href="{{
+            path(
+              'creation_mission',
+              {
+                type_mission: 'PLA'
+              }
+            )
+            }}">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+            </svg>
             <p>
               PLA
             </p>
@@ -30,37 +37,51 @@
         </li>
 
         <li class="choix-type-mission-list-item">
-          <a href="{{ path('creation_mission') }}">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-        </svg> 
-          <p>
+          <a href="{{
+            path(
+              'creation_mission',
+              {
+                type_mission: 'ANACONDA'
+              }
+            )
+            }}">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+            </svg>
+            <p>
               ANACONDA
             </p>
           </a>
         </li>
         <li class="choix-type-mission-list-item">
-          <a href="{{ path('creation_mission') }}">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#000000"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round">
-          <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-        </svg>  
-          <p>
+          <a href="{{
+            path(
+              'creation_mission',
+              {
+                type_mission: 'PCL'
+              }
+            )
+            }}">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
+            </svg>
+            <p>
               PLC
             </p>
           </a>

@@ -1,22 +1,56 @@
 :root {
-    --color-black: #1c222e;
+    /* --color-black: #1c222e;
     --color-green: #41533b;
     --color-kaki: #9e9a75;
+    --color-desert-sand: #E1D5A5;
+    --color-yellow-light: ##FFFCE3;
     --color-brown-1: #604439;
     --color-brown-0: #554840;
     --color-white: #fafafa;
     --color-black-2: #222;
     --color-blue: #00a0e9;
-    --color-red: #e90000;
-    --color-btn-menu: var(--color-kaki);
-    --color-btn-menu-rel: #7c7a5f;
-    --color-bg-form: var(--color-kaki);
-    --color-bg-form-div: #fafafa;
-    --color-btn-validation: yellow;
+    --color-red: #e90000; */
+
+    /* Green Camouflage Color Scheme  */
+    --color-pine-tree: #252C25;
+    --color-gray-asparagus: #4A5A3F;
+    --color-desert-sand: #E1D5A5;
+    --color-moss-green: #8E965B;
+    /* Hide And Hide Color Scheme */
+    --color-name-pine-tree: #2B3317;
+    --color-light-yellow: #FFFCE3;
+    --color-sage: #C1B893;
+    --color-boy-red: #6E6354;
+    --color-olive-drab-camouflage: #564B44;
+
+    /* Site */
+    /* Page base */
+    --color-header-bg: var(--color-desert-sand);
+    --color-header-ft: var(--color-pine-tree);
+    --color-header-border: var(--color-pine-tree);
+    --color-header-btn-ft: var(--color-pine-tree);
+    --color-header-btn-ft-hover: var(--color-gray-asparagus);
+    --color-main-bg: var(--color-gray-asparagus);
+    --color-nav-btn-bg: var(--color-desert-sand);
+    --color-nav-btn-border: var(--color-pine-tree);
+    --color-nav-btn-focus: var(--color-pine-tree);
+    --color-nav-btn-active: var(--color-pine-tree);
+    --color-nav-btn-ft: var(--color-pine-tree);
+    --color-form-bg: var(--color-moss-green);
+    --color-form-border: var(--color-pine-tree);
+    --color-form-ft: var(--color-pine-tree);
+    --color-fieldset-border: var(--color-pine-tree);
+    --color-fieldset-bg: var(--color-desert-sand);
+    --color-fieldset-legend-ft: var(--color-fieldset-bg);
+    --color-fieldset-legend-bg: var(--color-pine-tree);
+    --color-fieldset-label-ft: var(--color-pine-tree);
+    --color-form-btn-bg: var(--color-moss-green);
+    --color-form-btn-border: var(--color-pine-tree);
+    --color-form-btn-submit-bg: yellow;
+    --color-form-btn-submit-border: var(--color-pine-tree);
 }
 
 body {
-    background-color: var(--color-green);
     font-family: 'Ubuntu Mono', monospace;
 }
 
@@ -25,9 +59,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 4rem 8rem;
-    background-color: var(--color-kaki);
-    color: var(--color-black);
-    border-bottom: .2rem solid var(--color-black);
+    background-color: var(--color-header-bg);
+    color: var(--color-header-ft);
+    border-bottom: .2rem solid var(--color-header-border);
 }
 
 header h1 {
@@ -40,7 +74,7 @@ header h1 {
 
 header a {
     display: block;
-    color: var(--color-black);
+    color: var(--color-header-btn-ft);
     text-decoration: underline;
     font-weight: 700;
     font-size: 2rem;
@@ -48,10 +82,18 @@ header a {
 }
 
 header a:hover {
-    color: var(--color-green);
+    color: var(--color-header-btn-ft-hover);
 }
 
-nav ul {
+main {
+    background-color: var(--color-main-bg);
+    padding: 4rem;
+    color: var(--color-main-ft);
+}
+
+
+
+main nav ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -60,11 +102,11 @@ nav ul {
     margin: 8rem;
 }
 
-nav ul li {
+main nav ul li {
     margin: 1rem;
 }
 
-nav ul li a {
+main nav ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,10 +114,10 @@ nav ul li a {
     align-items: center;
     padding: 0 2rem 1rem;
     appearance: none;
-    background-color: var(--color-btn-menu);
+    background-color: var(--color-nav-btn-bg);
     border-radius: 4px;
     border-width: 0;
-    border: .2rem solid var(--color-black);
+    border: .2rem solid var(--color-nav-btn-border);
     box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
     box-sizing: border-box;
     cursor: pointer;
@@ -83,28 +125,28 @@ nav ul li a {
     will-change: box-shadow, transform;
 }
 
-nav ul li a:focus {
-    box-shadow: var(--color-btn-menu-rel) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
+main nav ul li a:focus {
+    box-shadow: var(--color-nav-btn-focus) 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
 }
 
-nav ul li a:hover {
-    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-menu-rel) 0 -3px 0 inset;
+main nav ul li a:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-nav-btn-hover) 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-nav ul li a:active {
-    box-shadow: var(--color-btn-menu-rel) 0 3px 7px inset;
+main nav ul li a:active {
+    box-shadow: var(--color-nav-btn-active) 0 3px 7px inset;
     transform: translateY(2px);
 }
 
-nav ul li a svg {
+main nav ul li a svg {
     width: 4rem;
     height: 4rem;
     padding: 1rem;
 }
 
-nav ul li a p {
-    color: var(--color-black);
+main nav ul li a p {
+    color: var(--color-nav-btn-ft);
     font-size: 1.6rem;
     font-weight: 700;
 }
@@ -114,42 +156,78 @@ nav ul li a p {
 /* CREATION MISSION */
 /*  */
 
-main.creation-mission {
-    background-color: var(--color-green);
-    padding: 4rem;
-    color: var(--color-black);
-}
 
 main.creation-mission form {
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
     margin: 1rem;
-    background-color: var(--color-bg-form);
+    background-color: var(--color-form-bg);
+    border: .2rem solid var(--color-form-border);
+    border-radius: .2rem;
 }
 
-main.creation-mission form>div {
+main.creation-mission form fieldset {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    justify-content: space-evenly;
+    padding: 1rem;
     margin: 1rem;
+    border: var(--color-fieldset-border) .1rem solid;
+    background-color: var(--color-fieldset-bg);
+    border-radius: .2rem;
 }
 
-main.creation-mission form>div label {
+main.creation-mission form fieldset legend {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-fieldset-legend-ft);
+    background-color: var(--color-fieldset-legend-bg);
+    margin: 0;
+    padding: .4rem 1rem;
+}
+
+main.creation-mission form fieldset.debut-fin div {
     display: block;
-    margin: 1rem;
+}
+
+main.creation-mission form fieldset label {
+    display: block;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--color-black);
+    color: var(--color-fieldset-label-ft);
+    margin: 0 0 .2rem;
 }
 
-.btn-validation {
-    background-color: var(--color-btn-validation);
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, var(--color-btn-validation) 0 -3px 0 inset;
+main.creation-mission form fieldset button {
+    display: block;
+    margin: .6rem 0 2rem;
+    padding: .4rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--color-form-btn-bg);
+    border: var(--color-form-btn-border) .1rem solid;
+    color: var(--color-form-btn-ft);
+    cursor: pointer;
+    transition: all .1s;
+}
+
+main.creation-mission form fieldset button:hover,
+main.creation-mission form .btn-validation:hover {
+    transform: scale(1.05);
+}
+
+main.creation-mission form fieldset button:active,
+main.creation-mission form .btn-validation:active {
+    transform: scale(.95);
+}
+main.creation-mission form .btn-validation {
+    background-color: var(--color-form-btn-submit-bg);
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    border: .2rem solid var(--color-black);
+    border: .2rem solid var(--color-form-btn-submit-border);
     padding: 1rem;
-
+    cursor: pointer;
+    transition: all .1s;
 }

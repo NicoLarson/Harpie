@@ -48,6 +48,8 @@ class HarpieController extends AbstractController
      */
     public function creationMission(): Response
     {
+        $typeMission = $_GET['type_mission'];
+
         $ficheODE = new FicheODE();
         $formFicheODE = $this->createFormBuilder($ficheODE)
             ->add('dateDebut')
@@ -120,6 +122,7 @@ class HarpieController extends AbstractController
             'formTransport' => $formTransport->createView(),
             'formManoeuvreParMission' => $formManoeuvreParMission->createView(),
             'formCommunicationParMission' => $formCommunicationParMission->createView(),
+            'typeMission' => $typeMission,
         ]);
     }
 }
