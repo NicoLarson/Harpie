@@ -3,161 +3,125 @@
   Mission Harpie
 {% endblock %}
 {% block headerTitle %}
-  Création mission
+  Création mission {{ typeMission }}
 {% endblock %}
 {% block content %}
   <main class="creation-mission">
     <form>
-      <div class="form-debut-fin">
+      <fieldset class="debut-fin">
+        <legend>
+          Dates
+        </legend>
         {{ form_row(formFicheODE.dateDebut) }}
         {{ form_row(formFicheODE.dateFin) }}
-      </div>
-      <div class="form-cible">
+      </fieldset>
+
+      <fieldset class="cible">
+        <legend>
+          Cible
+        </legend>
         {{
           form_row(
             formCible,
             {
-              label: 'Cible'
+              label: ' ',
+              id: 'cible',
+              class: 'form-group-popup'
             }
           )
         }}
-        <button type="button" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-          </svg>
-        </button>
-      </div>
-      <div class="form-effectif-group">
-        <div class="form-effectif">
-          {{
-            form_row(
-              formEffectif,
-              {
-                label: 'Effectif'
-              }
-            )
-          }}
-          <button type="button" class="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
-        </div>
-        <div class="form-effectif-piroguier">
-          {{
-            form_row(
-              formEffectifPiroguier,
-              {
-                label: 'Effectif piroguer'
-              }
-            )
-          }}
-          <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-          </svg>
-        </div>
+        <button id="addCible" type="button" class="btn btn-plus">+</button>
+      </fieldset>
+
+      <fieldset class="effectif">
+        <legend>
+          Effectif
+        </legend>
+        {{
+          form_row(
+            formEffectif,
+            {
+              label: ' ',
+              id: 'effectif'
+            }
+          )
+        }}
+        <button type="button" class="btn btn-plus">+</button>
+        {{
+          form_row(
+            formEffectifPiroguier,
+            {
+              label: ' ',
+              id: 'effectifPiroguier',
+              class: 'form-group-popup'
+            }
+          )
+        }}
+        <button type="button" class="btn btn-plus">+</button>
         <div class="total-effectif">
           <p>
             Total effectif :
           </p>
           <p></p>
         </div>
-      </div>
-      <div class="form-transport">
+      </fieldset>
+
+      <fieldset class="transport">
+        <legend>
+          Transport
+        </legend>
         {{
           form_row(
             formTransport,
             {
-              label: 'Transport'
+              label: ' ',
+              id: 'transport',
+              class: 'form-group-popup'
             }
           )
         }}
-        <button type="button" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-          </svg>
-        </button>
-      </div>
-      <div class="form-manoeuvre">
+        <button type="button" class="btn btn-plus">+</button>
+      </fieldset>
+
+      <fieldset class="manoeuvre">
+        <legend>
+          Manoeuvre
+        </legend>
         {{
           form_row(
             formManoeuvreParMission,
             {
-              label: 'Manoeuvre'
+              label: ' '
             }
           )
         }}
-        <button type="button" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-          </svg>
-        </button>
-      </div>
-      {{ form_row(formFicheODE.cadreLegal) }}
-      {{ form_row(formFicheODE.observation) }}
-      <div class="form-communication">
+      </fieldset>
+
+      <fieldset class="cadre-legal">
+        <legend>
+          Cadre légal
+        </legend>
+        {{ form_row(formFicheODE.cadreLegal) }}
+        {{ form_row(formFicheODE.observation) }}
+      </fieldset>
+
+      <fieldset class="communication">
+        <legend>
+          Communication
+        </legend>
         {{
           form_row(
             formCommunicationParMission,
             {
-              label: 'Communication'
+              label: ' ',
+              id: 'communication',
+              class: 'form-group-popup'
             }
           )
         }}
-        <button type="button" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewbox="0 0 24 24"
-            fill="none"
-            stroke="#000000"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-          </svg>
-        </button>
-      </div>
+        <button type="button" class="btn btn-plus">+</button>
+      </fieldset>
+
       {{ form_row(formFicheODE.soumettre) }}
     </form>
   </main>
