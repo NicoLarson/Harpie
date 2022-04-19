@@ -10,3 +10,16 @@ import './styles/app.css';
 
 // start the Stimulus application
 import './bootstrap';
+
+import { createApp } from 'vue'
+
+const app = createApp({
+    delimiters: ['${', '}$'],
+    data() {
+        return {
+            count: 0
+        }
+    }
+})
+
+app.mount('#app')

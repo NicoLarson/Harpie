@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      {% block title %}
-
-      {% endblock %}
+      {% block title %}{% endblock %}
     </title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -15,16 +13,22 @@
   <body>
     <header>
       <h1>
-        {% block headerTitle %}
-
-        {% endblock %}
+        {% block headerTitle %}{% endblock %}
       </h1>
-      <a class="btn-menu" href="{{ path('menu') }}">MENU</a>
+      <a class="btn-menu" href="{{ path('menu') }}">
+        MENU
+      </a>
     </header>
-    {% block content %}
-
-    {% endblock %}
-
-    <footer></footer>
+    {% block content %}{% endblock %}
+    <footer>
+      <div id="app">
+      <button @click="count++">
+        Count is: ${ count }$
+      </button>
+    </div>
+      </div>
+    </footer>
+    {% block javascripts %}{% endblock %}
+    {{ encore_entry_script_tags('app') }}
   </body>
 </html>
