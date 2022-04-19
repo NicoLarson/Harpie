@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mission Harpie</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <script src="../assets/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <body>
     <header>
       <h1>Création mission ANACONDA</h1>
@@ -361,7 +360,7 @@
           <legend>Cible</legend>
           <div>
             <label class="required"> </label>
-            <div id="form">
+            <div id="cible"  id="myModal" class="modal hide fade">
               <div>
                 <label for="form_latitudeN" class="required">Latitude n</label
                 ><input
@@ -406,32 +405,18 @@
                 type="hidden"
                 id="form__token"
                 name="form[_token]"
-                value="14b189b2a2eac39d88eb37505409.Gz5Y2rSzDgqIy980-kbrxkCbvJJ4MdLON9ApUFlU0Cw.b2R1q_bAOXi8-bNtrz-RhQbfhfchX6WPfLxHfQ8bpwFpXBuvwIRITrry7w"
+                value="20c2ef6c0695360bd83e8bee88e0e3.XSzSB6mw9hpVCAWlneCQ52uiRX-A-QApT7Pj1d_rqSQ.Clq7V_HvpFYFZEHT2KbhjTKTAyjXvEtIePHSiuvfmnA7bZt9mdK3dHhsNQ"
               />
             </div>
           </div>
-          <button type="button" class="btn btn-primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
+          <button type="button" class="btn btn-plus" type="button" data-toggle="modal" data-target="#myModal">+</button>
         </fieldset>
 
         <fieldset class="effectif">
           <legend>Effectif</legend>
           <div>
             <label class="required"> </label>
-            <div id="form">
+            <div id="effectif">
               <div>
                 <label for="form_effectifCategorie" class="required"
                   >Effectif categorie</label
@@ -479,28 +464,14 @@
                 type="hidden"
                 id="form__token"
                 name="form[_token]"
-                value="81aaa452.h4kDn_rv1XpLQoCLPAy6H84CcyXIvE8XW-lzrEID3_M.89Mu7ric4gh_cOzSaXXAXIhGSkCR0jhWEIUdgRRMqN7160DqjtiTPnl7sA"
+                value="24c97dbca24.KgJVaKKFID8GMNDuVKSyyQbla57rdH2SqCmG0hRBEqs.fXQ8OPracnNWXJSYEeLDo1_ULcm8MTbzn2u3jSB1If9MQxwSkudhUStU4A"
               />
             </div>
           </div>
-          <button type="button" class="btn btn-primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
+          <button type="button" class="btn btn-plus">+</button>
           <div>
             <label class="required"> </label>
-            <div id="form">
+            <div id="effectifPiroguier">
               <div>
                 <label for="form_effectifCategorie" class="required"
                   >Effectif categorie</label
@@ -548,25 +519,11 @@
                 type="hidden"
                 id="form__token"
                 name="form[_token]"
-                value="c5a38f7e2e27ffd63ba4d4133ccad7a.fs7hDkkmzviMgsD1j1QqJtgYLv2QpLieDp8iG9qIlic.CpTMfwtV-Yq4sKys2i1QZZ5cF5jJys_fRfNMNozH4QoMrKJ7PRGIvL678A"
+                value="f.ANszHv-OkGxzVgcuK6wk0gf9Mv4B1-EnJdDeFlz6feo.V61aTqfRwiAjOkNYbupVuF7MdKlWkqpGEpLvSWjOTr5mmnpkz-zRAl4yNw"
               />
             </div>
           </div>
-          <button type="button" class="btn btn-primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
+          <button type="button" class="btn btn-plus">+</button>
           <div class="total-effectif">
             <p>Total effectif :</p>
             <p></p>
@@ -577,7 +534,7 @@
           <legend>Transport</legend>
           <div>
             <label class="required"> </label>
-            <div id="form">
+            <div id="transport">
               <div>
                 <label for="form_categorie" class="required">Categorie</label
                 ><input
@@ -620,25 +577,11 @@
                 type="hidden"
                 id="form__token"
                 name="form[_token]"
-                value="1a009d4ad1e492c2c5bf4e5.NrXe0Dc-w1RgXEHBF-XwQBlZBlsR8PVdijI2wzEW3GA.Qu_zoXVN9CZUbi2YQpyKA18dPz5InoIcwV5Y7mdZq01E152lQwmFEFJlcQ"
+                value="717eed1506912c03e5ef0da59320.G1R6H_pzSfvOX9X5l4H1ZLA1sIkILPueAIlzjkjAQfU.TCITT6IsG7eeM5GP0seEDukE9t5fabD_N8tC0Xz0cqF9FTNlyhEIleM75Q"
               />
             </div>
           </div>
-          <button type="button" class="btn btn-primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
+          <button type="button" class="btn btn-plus">+</button>
         </fieldset>
 
         <fieldset class="manoeuvre">
@@ -676,25 +619,10 @@
                 type="hidden"
                 id="form__token"
                 name="form[_token]"
-                value="a0fad8f5a9307ae40c20d7110.GC3afMRCYvR2D-3WqUlpr3q1h-GWVBySg-seR2zZeyE.bHf3DYYxVYZCPYGP_DAT7DzxvoTPOmvTyIdwajqWDAxqT5kJsHUksEQ23Q"
+                value="b0f4b4e54162147b037.sr85ITNL15K6DwCuHmVEetxyX6F18sKi9V2dklNw7ig.5clQcWsUhd7qY0TYWyM1EIVDGfYit4nDwh-szWdE3XzU_nBbAymW_JdrMA"
               />
             </div>
           </div>
-          <button type="button" class="btn btn-primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
         </fieldset>
 
         <fieldset class="cadre-legal">
@@ -719,7 +647,7 @@
           <legend>Communication</legend>
           <div>
             <label class="required"> </label>
-            <div id="form">
+            <div id="communication">
               <div>
                 <label for="form_communication" class="required"
                   >Communication</label
@@ -733,25 +661,11 @@
                 type="hidden"
                 id="form__token"
                 name="form[_token]"
-                value="1923cc67a1ce1.7EFRIdj2zv-K9Q-gTG7qo2MgGGPkJLzoJLKKrS5pu_4.mBt8UJqF-Y2-x2P5GReQ4CVkIQa9Ssupb97kgHgmzNOeIxJUrMGIu7jMPw"
+                value="bb74849cea30be47f219b8181.mEPR9YDMs8ob-HveybmceggY4JFfoaiIOqjNuq56YbU.zzW4pdiT4YZLlD-ojP_tEFEppsYI5OPpDer85ZpOUuH-ApiPsK7ypDacSw"
               />
             </div>
           </div>
-          <button type="button" class="btn btn-primary">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewbox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M3 3h18v18H3zM12 8v8m-4-4h8" />
-            </svg>
-          </button>
+          <button type="button" class="btn btn-plus">+</button>
         </fieldset>
 
         <div>
@@ -764,10 +678,10 @@
             Soumettre
           </button>
         </div>
-        </div>
       </form>
     </main>
 
     <footer></footer>
+    <script src="./js/popupCible.js"></script>
   </body>
 </html>

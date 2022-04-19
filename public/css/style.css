@@ -48,6 +48,8 @@
     --color-form-btn-border: var(--color-pine-tree);
     --color-form-btn-submit-bg: yellow;
     --color-form-btn-submit-border: var(--color-pine-tree);
+    --color-popup-bg: var(--color-desert-sand);
+    --color-popup-border: var(--color-pine-tree);
 }
 
 body {
@@ -152,13 +154,13 @@ main nav ul li a p {
 }
 
 
-/*  */
 /* CREATION MISSION */
-/*  */
-
 
 main.creation-mission form {
     display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding: 1rem;
     margin: 1rem;
@@ -170,7 +172,6 @@ main.creation-mission form {
 main.creation-mission form fieldset {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     padding: 1rem;
     margin: 1rem;
     border: var(--color-fieldset-border) .1rem solid;
@@ -212,6 +213,11 @@ main.creation-mission form fieldset button {
     transition: all .1s;
 }
 
+main.creation-mission form fieldset .btn-plus {
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
 main.creation-mission form fieldset button:hover,
 main.creation-mission form .btn-validation:hover {
     transform: scale(1.05);
@@ -236,4 +242,71 @@ main.creation-mission form .btn-validation {
 main.creation-mission form>div:last-child {
     align-self: flex-end;
     margin: 1rem;
+}
+
+
+/* POPUP */
+
+#cible,
+#effectif,
+#effectifPiroguier,
+#transport,
+#manoeuvre,
+#communication {
+    display: none;
+}
+
+#cible.show,
+#effectif.show,
+#effectifPiroguier.show,
+#transport.show,
+#manoeuvre.show,
+#communication.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+
+#cible.show>div,
+#effectif.show>div,
+#effectifPiroguier.show>div,
+#transport.show>div,
+#manoeuvre.show>div,
+#communication.show>div {
+    display: flex;
+    flex-direction: column;
+    padding: .2rem 2rem;
+    margin: 0 auto;
+    background-color: var(--color-popup-bg);
+    width: 12rem;
+    border-left: .1rem solid var(--color-popup-border);
+    border-right: .1rem solid var(--color-popup-border);
+}
+
+#cible.show>div:first-child,
+#effectif.show>div:first-child,
+#effectifPiroguier.show>div:first-child,
+#transport.show>div:first-child,
+#manoeuvre.show>div:first-child,
+#communication.show>div:first-child {
+    padding-top: 2rem;
+    border-top: .1rem solid var(--color-popup-border);
+}
+
+#cible.show>div:last-child,
+#effectif.show>div:last-child,
+#effectifPiroguier.show>div:last-child,
+#transport.show>div:last-child,
+#manoeuvre.show>div:last-child,
+#communication.show>div:last-child {
+    border-bottom: .1rem solid var(--color-popup-border);
 }

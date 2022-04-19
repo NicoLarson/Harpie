@@ -17,6 +17,8 @@ composer install
 ```bash
 # Make sure you have started postgresql
 sudo service postgresql start
+# Connection à postgresql
+sudo -i -u postgres
 php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
