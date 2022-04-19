@@ -6,17 +6,43 @@
   Création mission {{ typeMission }}
 {% endblock %}
 {% block content %}
-  <main class="creation-mission">
-    <form>
-      <fieldset class="debut-fin">
+   <main class="creation-mission">
+ <form>
+       <fieldset class="debut-fin" id="calendar">
         <legend>
           Dates
         </legend>
         {{ form_row(formFicheODE.dateDebut) }}
         {{ form_row(formFicheODE.dateFin) }}
-      </fieldset>
+      </fieldset> 
 
-      <fieldset class="cible">
+      <fieldset class="cible" id="cibles">
+        <legend>
+          Cibles
+        </legend>
+        <dl class="cibles-list" v-for="cible in cibles">
+          <dt>
+            ${cible.libelle}$
+          </dt>
+          <dd>
+            Latitude: ${cible.latitude}$ <br>
+            Longitude: ${cible.longitude}$
+          </dd>
+        </dl>
+        <label>Libelle</label>
+          <input require type="text" v-model="newCibleLibelle" placeholder="Libelle">
+        <label>Latitude</label>
+          <input require type="text" v-model="newCibleLatitude" placeholder="Latitude">
+        <label>Longitude</label>
+          <input require type="text" v-model="newCibleLongitude" placeholder="Longitude">
+      
+        <div @click=addCible><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v18H3zM12 8v8m-4-4h8"/></svg></div>
+      </fieldset>
+    </form>
+
+
+
+      {# <fieldset class="cible">
         <legend>
           Cible
         </legend>
@@ -30,8 +56,10 @@
             }
           )
         }}
-        <button id="addCible" type="button" class="btn btn-plus">+</button>
-      </fieldset>
+        <button  id="addCible" type="button" class="btn btn-plus">+</button>
+      </fieldset> #}
+
+{# 
 
       <fieldset class="effectif">
         <legend>
@@ -122,7 +150,6 @@
         <button type="button" class="btn btn-plus">+</button>
       </fieldset>
 
-      {{ form_row(formFicheODE.soumettre) }}
-    </form>
+      {{ form_row(formFicheODE.soumettre) }} #}
   </main>
 {% endblock %}

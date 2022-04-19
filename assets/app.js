@@ -7,19 +7,11 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
+import './styles/reset.css';
+import './styles/style.css';
 
 // start the Stimulus application
 import './bootstrap';
-
-import { createApp } from 'vue'
-
-const app = createApp({
-    delimiters: ['${', '}$'],
-    data() {
-        return {
-            count: 0
-        }
-    }
-})
-
-app.mount('#app')
+import './js/GpsPoint.js';
+import './components/cible.js';
+import './components/calendar.js';
