@@ -247,14 +247,14 @@ main.creation-mission form>div:last-child {
 
 /* POPUP */
 
-#cible,
+/* #cible,
 #effectif,
 #effectifPiroguier,
 #transport,
 #manoeuvre,
 #communication {
     display: none;
-}
+} */
 
 #cible.show,
 #effectif.show,

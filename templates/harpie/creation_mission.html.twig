@@ -5,9 +5,27 @@
 {% block headerTitle %}
   Création mission {{ typeMission }}
 {% endblock %}
+{# {% form_theme formForce 'bootstrap_5_layout.html.twig' %} #}
 {% block content %}
   <main class="creation-mission">
-    <form>
+    <p>
+      Numéro du demandeur: 007
+    </p>
+    <p>
+      Type de mission: {{ typeMission }}
+    </p>
+    {% if typeMission == 'ANACONDA' or typeMission == 'PLA' %}
+      <p>
+        Force: Gendarmerie
+      </p>
+    {% else %}
+     
+    {% endif %}
+    {{ form(formFicheODE) }}
+  </main>
+{% endblock %}
+
+{# <form>
       <fieldset class="debut-fin">
         <legend>
           Dates
@@ -123,6 +141,4 @@
       </fieldset>
 
       {{ form_row(formFicheODE.soumettre) }}
-    </form>
-  </main>
-{% endblock %}
+    </form> #}
