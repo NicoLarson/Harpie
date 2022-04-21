@@ -71,6 +71,13 @@ class HarpieController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/carte", name="carte")
+     */
+    public function map(): Response
+    {
+        return $this->render('harpie/carte.html.twig', []);
+    }
 
     /**
      * @Route("/creation_mission", name="creation_mission")

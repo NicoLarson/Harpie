@@ -311,3 +311,24 @@ main.creation-mission form>div:last-child {
 #communication.show>div:last-child {
     border-bottom: .1rem solid var(--color-popup-border);
 }
+
+.map {
+    height: 800px;
+    width: 600px;
+}
+
+
+main.fiche-bilan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+main.fiche-bilan section {
+    display: flex;
+    flex-direction: column;
+    background-color:#fafafa;
+    padding: 2rem;
+    margin: 2rem;
+}
