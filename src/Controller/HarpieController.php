@@ -16,6 +16,7 @@ use Doctrine\ORM\Mapping\Entity;
 use App\Entity\EffectifCategorie;
 use App\Entity\ManoeuvreParMission;
 use App\Entity\CommunicationParMission;
+use App\Repository\FicheODERepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -49,6 +50,27 @@ class HarpieController extends AbstractController
             'controller_name' => 'HarpieController',
         ]);
     }
+    /**
+     * @Route("/fiches_bilan", name="fiches_bilan")
+     */
+    public function fichesBilan(FicheODERepository $ficheODERepository): Response
+    {
+        $fiches = $ficheODERepository->findAll();
+        return $this->render('harpie/fiches_bilan.html.twig', [
+            'fiches' => $fiches,
+        ]);
+    }
+    /**
+     * @Route("/fiche_bilan/{id}", name="fiche_bilan")
+     */
+    public function ficheBilan(FicheODERepository $ficheODERepository, $id): Response
+    {
+        $fiche = $ficheODERepository->find($id);
+        return $this->render('harpie/fiche_bilan.html.twig', [
+            'fiche' => $fiche,
+        ]);
+    }
+
 
     /**
      * @Route("/creation_mission", name="creation_mission")

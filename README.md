@@ -12,6 +12,7 @@
 composer install
 ```
 
+
 ## Create Postgresql database
 
 ```bash
@@ -27,4 +28,10 @@ php bin/console doctrine:fixtures:load
 
 ```bash
 symfony server:start
+```
+## Running webpack
+
+```bash
+npm install
+npm run dev
 ```
