@@ -1,144 +1,43 @@
 {% extends 'base.html.twig' %}
 {% block title %}
-  Mission Harpie
+	Mission Harpie
+
 {% endblock %}
 {% block headerTitle %}
-  Création mission {{ typeMission }}
+	Création mission
 {% endblock %}
 {# {% form_theme formForce 'bootstrap_5_layout.html.twig' %} #}
 {% block content %}
-  <main class="creation-mission">
-    <p>
-      Numéro du demandeur: 007
-    </p>
-    <p>
-      Type de mission: {{ typeMission }}
-    </p>
-    {% if typeMission == 'ANACONDA' or typeMission == 'PLA' %}
-      <p>
-        Force: Gendarmerie
-      </p>
-    {% else %}
-     
-    {% endif %}
-    {{ form(formFicheODE) }}
-  </main>
+	<main class="creation-mission">
+		{% for message in app.flashes('danger') %}
+			<div class="alert alert-danger">
+				{{ message }}
+			</div>
+		{% endfor %}
+		<form>
+			{{ form_row(formFicheODE.demandeur) }}
+			<fieldset>
+				<legend>
+					Éléments généraux
+
+				</legend>
+				{{ form_row(formFicheODE.typeMission) }}
+				{{ form_row(formFicheODE.force) }}
+			</fieldset>
+			<fieldset>
+				<legend>
+					Cadre Renseignement développement :
+				</legend>
+				{{ form_row(formFicheODE.denominationOperation) }}
+				{{ form_row(formFicheODE.dateDebut) }}
+				{{ form_row(formFicheODE.dateFin) }}
+				{{ form_row(formFicheODE.cadreLegal) }}
+				{{ form_row(formFicheODE.observation) }}
+
+
+			</fieldset>
+			{{ form_row(formFicheODE.etat) }}
+			{{ form_row(formFicheODE.soumettre) }}
+		</form>
+	</main>
 {% endblock %}
-
-{# <form>
-      <fieldset class="debut-fin">
-        <legend>
-          Dates
-        </legend>
-        {{ form_row(formFicheODE.dateDebut) }}
-        {{ form_row(formFicheODE.dateFin) }}
-      </fieldset>
-
-      <fieldset class="cible">
-        <legend>
-          Cible
-        </legend>
-        {{
-          form_row(
-            formCible,
-            {
-              label: ' ',
-              id: 'cible',
-              class: 'form-group-popup'
-            }
-          )
-        }}
-        <button id="addCible" type="button" class="btn btn-plus">+</button>
-      </fieldset>
-
-      <fieldset class="effectif">
-        <legend>
-          Effectif
-        </legend>
-        {{
-          form_row(
-            formEffectif,
-            {
-              label: ' ',
-              id: 'effectif'
-            }
-          )
-        }}
-        <button type="button" class="btn btn-plus">+</button>
-        {{
-          form_row(
-            formEffectifPiroguier,
-            {
-              label: ' ',
-              id: 'effectifPiroguier',
-              class: 'form-group-popup'
-            }
-          )
-        }}
-        <button type="button" class="btn btn-plus">+</button>
-        <div class="total-effectif">
-          <p>
-            Total effectif :
-          </p>
-          <p></p>
-        </div>
-      </fieldset>
-
-      <fieldset class="transport">
-        <legend>
-          Transport
-        </legend>
-        {{
-          form_row(
-            formTransport,
-            {
-              label: ' ',
-              id: 'transport',
-              class: 'form-group-popup'
-            }
-          )
-        }}
-        <button type="button" class="btn btn-plus">+</button>
-      </fieldset>
-
-      <fieldset class="manoeuvre">
-        <legend>
-          Manoeuvre
-        </legend>
-        {{
-          form_row(
-            formManoeuvreParMission,
-            {
-              label: ' '
-            }
-          )
-        }}
-      </fieldset>
-
-      <fieldset class="cadre-legal">
-        <legend>
-          Cadre légal
-        </legend>
-        {{ form_row(formFicheODE.cadreLegal) }}
-        {{ form_row(formFicheODE.observation) }}
-      </fieldset>
-
-      <fieldset class="communication">
-        <legend>
-          Communication
-        </legend>
-        {{
-          form_row(
-            formCommunicationParMission,
-            {
-              label: ' ',
-              id: 'communication',
-              class: 'form-group-popup'
-            }
-          )
-        }}
-        <button type="button" class="btn btn-plus">+</button>
-      </fieldset>
-
-      {{ form_row(formFicheODE.soumettre) }}
-    </form> #}

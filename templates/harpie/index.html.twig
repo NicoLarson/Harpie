@@ -1,56 +1,54 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-  Mission Harpie
+	Mission Harpie
 {% endblock %}
 {% block headerTitle %}
-  Mission Harpie
+	Mission Harpie
 {% endblock %}
 {% block content %}
-  <main class="menu">
-    <nav>
-      <ul class="main-menu-list">
-        <li class="main-menu-list-item">
-          <a href="{{ path('choix_type_mission') }}">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill='#222222'><path d="M19 10h-5V5c0-1.1-.9-2-2-2s-2 .9-2 2v5H5c-1.1 0-2 .9-2 2s.9 2 2 2h5v5c0 1.1.9 2 2 2s2-.9 2-2v-5h5c1.1 0 2-.9 2-2s-.9-2-2-2z"></path></g></svg>
-            <p>
-              Création d'un mission
-            </p>
-          </a>
-        </li>
+	<main class="menu">
+		<nav>
+			<ul class="main-menu-list">
+				<li class="main-menu-list-item">
+					<a href="{{ path('creation_mission') }}">
+						<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+							<g fill='#222222'>
+								<path d="M19 10h-5V5c0-1.1-.9-2-2-2s-2 .9-2 2v5H5c-1.1 0-2 .9-2 2s.9 2 2 2h5v5c0 1.1.9 2 2 2s2-.9 2-2v-5h5c1.1 0 2-.9 2-2s-.9-2-2-2z"></path>
+							</g>
+						</svg>
+						<p>
+							Création d'un mission
+						</p>
+					</a>
+				</li>
 
-        <li class="main-menu-list-item">
-          <a href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill='#222222'>
-<polygon points="8,20 2,18 2,4 8,6 "></polygon>
-<polygon points="15,18 9,20 9,6 15,4 "></polygon>
-<polygon points="22,20 16,18 16,4 22,6 "></polygon>
-</g></svg>
-            <p>
-              Carte
-            </p>
-          </a>
-        </li>
-        <li class="main-menu-list-item">
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#000000"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
-              <path d="M14 3v5h5M16 13H8M16 17H8M10 9H8" />
-            </svg>
-            <p>
-              Fiches Bilan
-            </p>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </main>
+				<li class="main-menu-list-item">
+					<a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+							<g fill='#222222'>
+								<polygon points="8,20 2,18 2,4 8,6 "></polygon>
+								<polygon points="15,18 9,20 9,6 15,4 "></polygon>
+								<polygon points="22,20 16,18 16,4 22,6 "></polygon>
+							</g>
+						</svg>
+						<p>
+							Carte
+						</p>
+					</a>
+				</li>
+				<li class="main-menu-list-item">
+					<a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/>
+							<path d="M14 3v5h5M16 13H8M16 17H8M10 9H8"/>
+						</svg>
+						<p>
+							Fiches Bilan
+						</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</main>
 {% endblock %}
