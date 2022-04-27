@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% block title %}
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		{% block stylesheets %}
+		{# 'app' must match the first argument to addEntry() in webpack.config.js #}
+		{{ encore_entry_link_tags('app') }}
 
-      {% endblock %}
-    </title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>
-        {% block headerTitle %}
+		<!-- Renders a link tag (if your module requires any CSS)
+			 <link rel="stylesheet" href="/build/app.css"> -->
+	{% endblock %}
 
-        {% endblock %}
-      </h1>
-      <a class="btn-menu" href="{{ path('menu') }}">MENU</a>
-    </header>
-    {% block content %}
+	{% block javascripts %}
+		{{ encore_entry_script_tags('app') }}
 
-    {% endblock %}
+		<!-- Renders app.js & a webpack runtime.js file
+			<script src="/build/runtime.js" defer></script>
+			<script src="/build/app.js" defer></script>
+			See note below about the "defer" attribute -->
+	{% endblock %}
+	</head>
+	<body>
+		<header class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<h1>
+				{% block headerTitle %}{% endblock %}
+			</h1>
+			<a class="nav-item" href="{{ path('menu') }}">MENU</a>
+		</header>
+		{% block content %}{% endblock %}
 
-    <footer></footer>
-  </body>
+		<footer></footer>
+
+	</body>
 </html>

@@ -38,7 +38,11 @@ class Demandeur
     {
         $this->fichesODE = new ArrayCollection();
     }
-
+    public function __toString()
+    {
+        return $this->numeroIdentifiantGendarme;
+    }
+   
     public function getId(): ?int
     {
         return $this->id;

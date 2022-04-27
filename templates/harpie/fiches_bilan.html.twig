@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Fiches bilan
+{% endblock %}
+{% block headerTitle %}
+	Fiches bilan
+{% endblock %}
+{% block content %}
+	<main class="fiches-bilan">
+		<ul>
+			{% for fiche in fiches %}
+				<li>
+					<h2>{{ fiche.dateDemande | date('d-m-Y H:i:s')  }}</h2>
+					<p>Demandeur:
+						{{ fiche.demandeur }}</p>
+					<p>Type de mission:
+						{{ fiche.typeMission }}</p>
+					<p>Etat:
+						{{ fiche.etat }}</p>
+					<a href="{{ path('fiche_bilan', {'id': fiche.id}) }}">Voir la fiche</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</main>
+{% endblock %}

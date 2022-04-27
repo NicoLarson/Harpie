@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Fiche bilan
+{% endblock %}
+{% block headerTitle %}
+	Fiche bilan
+{% endblock %}
+{% block content %}
+	<main class="fiche-bilan">
+		<div id="map" class="map">
+			<div id="popup" class="ol-popup">
+				<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+				<div id="popup-content"></div>
+			</div>
+		</div>
+		<section>
+			<h2>Numéro de mission:
+				{{ fiche.numeroMission }}</h2>
+			<p>
+				Demandeur:
+				{{ fiche.demandeur }}</p>
+			<p>Type de mission:
+				{{ fiche.typeMission }}</p>
+			<p>Force:
+				{{ fiche.force }}</p>
+			<p>Date de demande:
+				{{ fiche.dateDemande | date('d-m-Y H:i:s')}}</p>
+			<p>Dénomination de l'opération:
+				{{ fiche.denominationOperation }}</p>
+			<p>Date de début:
+				{{ fiche.dateDebut | date('d-m-Y H:i:s')}}</p>
+			<p>Date de fin:
+				{{ fiche.dateFin| date('d-m-Y H:i:s') }}</p>
+			<p>Cadre légal:
+				{{ fiche.cadreLegal }}</p>
+			<p>Observation:
+				{{ fiche.observation }}</p>
+			<p>État:
+				{{ fiche.etat }}</p>
+		</section>
+	</main>
+{% endblock %}

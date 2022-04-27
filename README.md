@@ -12,11 +12,14 @@
 composer install
 ```
 
+
 ## Create Postgresql database
 
 ```bash
 # Make sure you have started postgresql
 sudo service postgresql start
+# Connection à postgresql
+sudo -i -u postgres
 php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixtures:load
 ```
@@ -26,4 +29,9 @@ php bin/console doctrine:fixtures:load
 ```bash
 symfony server:start
 ```
-brian
+## Running webpack
+
+```bash
+npm install
+npm run dev
+```
